@@ -1,0 +1,5 @@
+Algorithm arrayReverse
+    initialize string 
+    ask user for input of string
+    find length of line - 1 because index start at 0
+    print char from last to start
