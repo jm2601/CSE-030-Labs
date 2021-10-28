@@ -1,0 +1,79 @@
+Algorithm sortArr(int, int[], int){
+    for (range 0 to size; i++){
+        initialize saved_value = int[];
+        initialize j = i;
+        if (descending){
+            while (j > 0 and int[j-1] > saved_value){
+                initialize int temp = int[j];
+                initialize int[j] = int[j-1];
+                initialize int[j-1] = temp;
+                descending--;
+            }
+        } end if
+        if (ascending){
+            while (j > 0 and int[j-1] < saved_value){
+                initialize int temp = int[j];
+                initialize int[j] = int[j-1];
+                initialize int[j-1] = temp;
+                descending--;
+        } end if 
+    }end for loop
+}end Algorithm sortArr
+
+Algorithm int main(){
+    ask user for input array size;
+    initialize array_size = 0;
+    input array_size;
+    if (size <= 0){
+        output Error
+    }
+    else {
+        initialize values[size];
+        ask user to input values for array;
+        user input array values;
+        for (range 0 to size; increment){
+            input values[i];
+        } end for loop
+        ask for ascending or descending order;
+        int order = -1;
+        user input order;
+        call function sortArr(order, values, array_size); 
+        if (ascending){
+            output ascending order sorted array
+        }
+        else{ 
+            output descending order sorted array
+        }
+}
+
+
+//no return value so void
+void sortArr(int order, int values[],  int size)
+{
+		//insertion sort 
+		for (int i = 0; i < size; i++)
+		{
+			int saved_value = values[i];
+			int j = i;
+			if (order == 0)
+			{
+				while (j > 0 && values[j-1] > saved_value)
+				{
+					int temp = values[j];
+					values[j] = values[j-1];
+					values[j-1] = temp;
+					j--;
+				}
+			}
+			if (order == 1)
+			{
+				while (j > 0 && values[j-1] <  saved_value)
+				{
+					int temp = values[j];
+					values[j] = values [j-1];
+					values[j-1] = temp;
+					j--;
+				}
+			}
+			//values[j] = saved_value;
+		}

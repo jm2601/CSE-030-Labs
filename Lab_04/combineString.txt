@@ -1,0 +1,23 @@
+Algorithm combineStr(string, int){
+    initialize string = "";
+    for(range 0 to num_of_times, i++){
+        string += value;
+    }
+    output string
+} End Algorithm combineStr()
+
+Algorithm int main(){
+    initialize string value;
+    initialize int num_of_times;
+    while (true) {
+        user input string;
+        user input num_of_times;
+        if (num_of_times <= 0)
+            break;
+        else {
+            call function combineStr(value, num_of_times)
+            output resulting string 
+        }
+    }
+} End Algorithm int main()
+
